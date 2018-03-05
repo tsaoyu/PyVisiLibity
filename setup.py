@@ -31,7 +31,7 @@ module = Extension('_visilibity', swig_opts = ['-c++'],
         headers = ['visilibity.hpp'], include = ['visilibity.hpp'])
 
 setup (name = 'VisiLibity',
-       version = '1.0.9',
+       version = '1.0.10',
        cmdclass = {'build': CustomBuild},
        author = 'Yu Cao',
        author_email = 'yu.cao@soton.ac.uk',
