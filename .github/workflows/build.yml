@@ -1,12 +1,14 @@
 name: Build
 
+env:
+  CIBW_BEFORE_ALL_LINUX: sudo apt-get install swig
+  CIBW_BEFORE_ALL_WINDOWS: choco install swig -f -y
+  CIBW_BEFORE_ALL_MACOS: brew install swig
+
 on: [push, pull_request]
 
 jobs:
-  env:
-    CIBW_BEFORE_ALL_LINUX: sudo apt-get install swig
-    CIBW_BEFORE_ALL_WINDOWS: choco install swig -f -y
-    CIBW_BEFORE_ALL_MACOS: brew install swig
+  
   build_wheels:
     name: Build wheels on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
@@ -29,7 +31,6 @@ jobs:
       - name: Install Visual C++
         if: runner.os == 'Windows'
         run: |
-          
           choco install vcpython27 -f -y
 
       - name: Build wheels
