@@ -1,7 +1,7 @@
 name: Build
 
 env:
-  CIBW_BEFORE_ALL_LINUX: apt install swig
+  CIBW_BEFORE_ALL_LINUX: yum install -y swig
   CIBW_BEFORE_ALL_WINDOWS: choco install swig -f -y
   CIBW_BEFORE_ALL_MACOS: brew install swig
 
