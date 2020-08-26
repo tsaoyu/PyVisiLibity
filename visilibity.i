@@ -18,6 +18,8 @@ License along with PyVisiLibity.  If not, see <http://www.gnu.org/licenses/>.
 
 */
 %module visilibity
+#pragma SWIG nowarn=501
+#pragma SWIG nowarn=501,505,401
 %{
 
 #include "visilibity.hpp"
