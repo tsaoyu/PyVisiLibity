@@ -1,7 +1,7 @@
 name: Build
 
 env:
-  CIBW_BEFORE_ALL_LINUX: yum install -y swig3.0
+  CIBW_BEFORE_ALL_LINUX: yum install -y http://mirror.centos.org/centos/7/extras/x86_64/Packages/swig3-3.0.12-17.el7.x86_64.rpm
   CIBW_BEFORE_ALL_WINDOWS: choco install swig -f -y
   CIBW_BEFORE_ALL_MACOS: brew install swig
 
