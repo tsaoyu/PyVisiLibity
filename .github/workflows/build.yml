@@ -4,6 +4,7 @@ env:
   CIBW_BEFORE_ALL_LINUX: yum install -y swig
   CIBW_BEFORE_ALL_WINDOWS: choco install swig -f -y
   CIBW_BEFORE_ALL_MACOS: brew install swig
+  CIBW_SKIP: cp35-*
 
 on: [push, pull_request]
 
