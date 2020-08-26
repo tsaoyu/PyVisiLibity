@@ -23,12 +23,12 @@ jobs:
           python -m pip install cibuildwheel==1.5.5
 
       - name: Install SWIG for Linux
-        if: runner.os == "Linux"
+        if: runner.os == 'Linux'
         run: |
           sudo apt-get install swig
       
       - name: Install SWIG for macOS
-        if: runner.os == "macOS"
+        if: runner.os == 'macOS'
         run: |
           brew install swig
 
